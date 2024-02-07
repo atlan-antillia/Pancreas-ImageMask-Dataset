@@ -53,7 +53,7 @@ The dataset <b>Pancreas-CT</b> and has the following folder structure.<br>
 
     
 </pre>
-Each sub-sub-folder of PANCREAS_* folder contains .dcm files.
+Each <b>sub-sub-folder of PANCREAS_*</b> folder contains <b>.dcm</b> files.
 <pre>
 ./PANCREAS_0001
 │  └─11-24-2015-PANCREAS0001-Pancreas-18957
@@ -63,7 +63,7 @@ Each sub-sub-folder of PANCREAS_* folder contains .dcm files.
 │           ...
 │           └─1-240.dcm
 </pre>
-TCIA_pancreas_labels-02-05-2017 folder contains nii files, which contain masks corresponding to pixel-imagegs in the .dcm files.
+<b>TCIA_pancreas_labels-02-05-2017</b> folder contains <b>.nii</b> files, which contain masks corresponding to pixel-imagegs in the .dcm files.
 <pre>
 ./TCIA_pancreas_labels-02-05-2017
  ├─label0001.nii
