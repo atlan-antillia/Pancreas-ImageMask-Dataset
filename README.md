@@ -135,6 +135,20 @@ Blended_train_dataset samples:<br>
 <br>
 Enlarged images:<br>
 <table>
+<thead>
+<tr>
+<td>
+images
+</td>
+<td>
+masks
+</td>
+<td>
+blended
+</td>
+</tr>
+</thead>
+<tbody>
 <tr>
 <td><img src="./asset/train/images/PANCREAS_0001-1100.jpg" width="360" height="auto"></td>
 <td><img src="./asset/train/masks/PANCREAS_0001-1100.jpg" width="360" height="auto"></td>
@@ -164,7 +178,7 @@ Enlarged images:<br>
 <td><img src="./asset/train/masks/PANCREAS_0050-1143.jpg" width="360" height="auto"></td>
 <td><img src="./asset/blended/PANCREAS_0050-1143.jpg" width="360" height="auto"></td>
 </tr>
-
+</tbody>
 </table>
 <br>
 <h3>
