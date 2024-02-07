@@ -136,32 +136,32 @@ Blended_train_dataset samples:<br>
 Enlarged images:<br>
 <table>
 <tr>
-<td><img src="./Pancreas-ImageMask-Dataset/train/images/PANCREAS_0001-1100.jpg" width="360" height="auto"></td>
-<td><img src="./Pancreas-ImageMask-Dataset/train/masks/PANCREAS_0001-1100.jpg" width="360" height="auto"></td>
+<td><img src="./asset/train/images/PANCREAS_0001-1100.jpg" width="360" height="auto"></td>
+<td><img src="./asset/train/masks/PANCREAS_0001-1100.jpg" width="360" height="auto"></td>
 <td><img src="./asset/blended/PANCREAS_0001-1100.jpg" width="360" height="auto"></td>
 </tr>
 
 <tr>
-<td><img src="./Pancreas-ImageMask-Dataset/train/images/PANCREAS_0015-1124.jpg" width="360" height="auto"></td>
-<td><img src="./Pancreas-ImageMask-Dataset/train/masks/PANCREAS_0015-1124.jpg" width="360" height="auto"></td>
+<td><img src="./asset/train/images/PANCREAS_0015-1124.jpg" width="360" height="auto"></td>
+<td><img src="./asset/train/masks/PANCREAS_0015-1124.jpg" width="360" height="auto"></td>
 <td><img src="./asset/blended/PANCREAS_0015-1124.jpg" width="360" height="auto"></td>
 </tr>
 
 <tr>
-<td><img src="./Pancreas-ImageMask-Dataset/train/images/PANCREAS_0028-1120.jpg" width="360" height="auto"></td>
-<td><img src="./Pancreas-ImageMask-Dataset/train/masks/PANCREAS_0028-1120.jpg" width="360" height="auto"></td>
+<td><img src="./asset/train/images/PANCREAS_0028-1120.jpg" width="360" height="auto"></td>
+<td><img src="./asset/train/masks/PANCREAS_0028-1120.jpg" width="360" height="auto"></td>
 <td><img src="./asset/blended/PANCREAS_0028-1120.jpg" width="360" height="auto"></td>
 </tr>
 
 <tr>
-<td><img src="./Pancreas-ImageMask-Dataset/train/images/PANCREAS_0046-1078.jpg" width="360" height="auto"></td>
-<td><img src="./Pancreas-ImageMask-Dataset/train/masks/PANCREAS_0046-1078.jpg" width="360" height="auto"></td>
+<td><img src="./asset/train/images/PANCREAS_0046-1078.jpg" width="360" height="auto"></td>
+<td><img src="./asset/train/masks/PANCREAS_0046-1078.jpg" width="360" height="auto"></td>
 <td><img src="./asset/blended/PANCREAS_0046-1078.jpg" width="360" height="auto"></td>
 </tr>
 
 <tr>
-<td><img src="./Pancreas-ImageMask-Dataset/train/images/PANCREAS_0050-1143.jpg" width="360" height="auto"></td>
-<td><img src="./Pancreas-ImageMask-Dataset/train/masks/PANCREAS_0050-1143.jpg" width="360" height="auto"></td>
+<td><img src="./asset/train/images/PANCREAS_0050-1143.jpg" width="360" height="auto"></td>
+<td><img src="./asset/train/masks/PANCREAS_0050-1143.jpg" width="360" height="auto"></td>
 <td><img src="./asset/blended/PANCREAS_0050-1143.jpg" width="360" height="auto"></td>
 </tr>
 
