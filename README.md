@@ -129,7 +129,7 @@ in <b>./Pancreas-ImageMask-Dataset/train</b> folder.<br>
 <pre>
 python ImageMaskBlender.py
 </pre> 
-, by which <b>Blended_tran_dataset</b> can be created,<br>
+, by which <b>Blended_train_dataset</b> can be created,<br>
 Blended_train_dataset samples:<br>
 <img src="./asset/blended_train_dataset_samples.png" width="1024" height="auto"><br>
 <br>
