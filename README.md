@@ -123,8 +123,8 @@ python split_master.py
 Pancreas-ImageMask-Dataset Statistics:<br>
 <img src="./_Pancreas-ImageMask-Dataset_.png" width="512" height="auto"><br>
 
-<h3>3.3 Validate mask regions </h3>
-Please run the following command to validate mask regions corresponding to images
+<h3>3.3 Inspect mask regions </h3>
+Please run the following command to inspect mask regions corresponding to images
 in <b>./Pancreas-ImageMask-Dataset/train</b> folder.<br>
 <pre>
 python ImageMaskBlender.py
