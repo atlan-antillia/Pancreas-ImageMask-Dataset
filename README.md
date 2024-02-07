@@ -84,7 +84,7 @@ Please move to <b>generator</b> directory, and run the following command.<br>
 </pre>
 
 By using this Python script <a href="./generator/ImageMaskDatasetGenerator.py">ImageMaskDatasetGenerator.py</a>,
- we have created the augmented <b>Pancreas-master</b> jpg image dataset of image-size 512x512 from the 
+ we have created <b>Pancreas-master</b> jpg image dataset of image-size 512x512 from the 
  .dcm files in <b>./PANCREAS_CT/</b> folders and .nii files in <b>TCIA_pancreas_labels-02-05-2017</b>.<br>
 
 <pre>
