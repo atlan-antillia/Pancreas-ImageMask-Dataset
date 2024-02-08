@@ -189,8 +189,8 @@ blended
 You can download the augmented V2 dataset including mirrored images and masks:<br>
 
 <a href="https://drive.google.com/file/d/14DFkGFjm02vORDjvC1q8v0p--E3Ngg9L/view?usp=sharing">
-Pancreas-ImageMask-Dataset_V2.0.zip</a><br>
+Pancreas-ImageMask-Dataset_V2.0.zip</a><br><br>
 , and also the previous V1 dataset:<br>
-<a href="https://drive.google.com/file/d/1Q7cDMSQgtXgZJjg-xIiFHmXOyNn3vio1/view?usp=sharing">Pancreas-ImageMask-Dataset_V1.zip</a>
+<a href="https://drive.google.com/file/d/1Q7cDMSQgtXgZJjg-xIiFHmXOyNn3vio1/view?usp=sharing">Pancreas-ImageMask-Dataset_V1.0.zip</a>
 
 <br>
