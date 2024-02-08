@@ -14,7 +14,8 @@
 #
 # ImageMaskDatasetGenerator.py
 #
-
+# 2024/02/08 Modified to create the mirrored images and masks.
+ 
 import os
 import glob
 import pydicom
@@ -26,9 +27,10 @@ import traceback
 
 class ImageMaskDatasetGenerator:
 
-  def __init__(self, dcms_dir="./Pancreas-CT/", labels_dir="./TCIA_pancreas_labels-02-05-2017/"):
+  def __init__(self, dcms_dir="./Pancreas-CT/", labels_dir="./TCIA_pancreas_labels-02-05-2017/", mirrored=False):
     self.dcms_dir   = dcms_dir
     self.labels_dir = labels_dir
+    self.mirrored   = mirrored
     self.subdirs    = sorted(os.listdir(self.dcms_dir))
     self.NUM_SUBDIRS = len(self.subdirs)
 
@@ -42,14 +44,13 @@ class ImageMaskDatasetGenerator:
        os.makedirs(masks_dir)
 
     print(" len dicms_dir {}".format( self.NUM_SUBDIRS))
-    #subdirs = ["PANCREAS_0001"]
-    #for subdir in subdirs:
+  
     for subdir in self.subdirs:
-
       if subdir == "LICENSE":
         continue
       if subdir == "PANCREAS_0063":
         continue
+
       print(" --- subdir {}".format(subdir))
       mask_nii      = "label" + subdir.split("_")[1] + ".nii"
 
@@ -65,8 +66,7 @@ class ImageMaskDatasetGenerator:
       if (num_mask_files != num_dcm_file):
         print("UNMATCHED ----------- {} {}".format(num_mask_files, num_dcm_file))
         continue
-      debug = True
-      dcm_file = dcm_files[0]
+
       for dcm_file in dcm_files:
         basename = os.path.basename(dcm_file)
         name     = basename.split(".")[0]
@@ -75,20 +75,33 @@ class ImageMaskDatasetGenerator:
         filename =  subdir + "-" + name + ".jpg"
         corresponding_mask_filepath = os.path.join(masks_dir, filename)
         if os.path.exists(corresponding_mask_filepath):
-        #if debug:
-          image_file = os.path.join(images_dir, filename)
-          self.generate_image_file(dcm_file, image_file)
+          self.generate_image_file(dcm_file, subdir, images_dir)
         else:
           print("=== Skipped {}".format(filename))
 
-  def generate_image_file(self, dcm_file, image_file):
-    dcm = pydicom.dcmread(dcm_file)
-    img = dcm.pixel_array
-    image = Image.fromarray(img)
-    image = image.convert("RGB")
+  def generate_image_file(self, dcm_file, subdir, images_dir):
+    dcm      = pydicom.dcmread(dcm_file)
+    img      = dcm.pixel_array
+    image    = Image.fromarray(img)
+    image    = image.convert("RGB")
+
+    basename = os.path.basename(dcm_file)
+    name     = basename.split(".")[0]
+    name     = name.replace("-", "")
+    print("=== dcm file {}". format(dcm_file))
+    filename =  subdir + "-" + name + ".jpg"
+    image_file = os.path.join(images_dir, filename)
     image.save(image_file, "JPEG")
     print("Saved image {}".format(image_file))
-    
+
+    if self.mirrored:
+      mirrored_image = ImageOps.mirror(image)
+      mirrored_filename =  subdir + "-mirrored-" + name + ".jpg"
+      image_file = os.path.join(images_dir, filename)
+      mirrored_output_file = os.path.join(images_dir, mirrored_filename)
+      mirrored_image.save(mirrored_output_file)
+      print("=== Saved image {}".format(mirrored_output_file))
+
   def generate_mask_files(self, mask_nii_file, subdir, masks_dir):
     nii = nib.load(mask_nii_file)
     fdata = nii.get_fdata()
@@ -96,7 +109,6 @@ class ImageMaskDatasetGenerator:
   
     num = shape[2]
     index = 1001
-    debug = True
     for i in range(num):
       data = fdata[:,:,i]
       data = data * 255.0
@@ -104,16 +116,20 @@ class ImageMaskDatasetGenerator:
       filename = subdir + "-" + str(index+ i) + ".jpg"
       output_file = os.path.join(masks_dir, filename)
       if data.any() >0:
-      #if debug:
         image = Image.fromarray(data)
         image = image.convert("RGB")
         image = image.rotate(90)
-        #image = ImageOps.mirror(image)
         image = ImageOps.flip(image)
-
         image.save(output_file)
         print("=== Saved mask {}".format(output_file))
-        #input("-------------------------")
+
+        if self.mirrored:
+          mirrored_image = ImageOps.mirror(image)
+          mirrored_filename = subdir + "-mirrored-" +str(index+ i) + ".jpg"
+          mirrored_output_file = os.path.join(masks_dir, mirrored_filename)
+          mirrored_image.save(mirrored_output_file)
+          print("=== Saved mask {}".format(mirrored_output_file))
+
       else:
         print("=== Skipped {}".format(output_file))
     return num
@@ -121,7 +137,6 @@ class ImageMaskDatasetGenerator:
 if __name__ == "__main__":
   try:
     input_file = ""
-    #convert(input_file)
     dcms_dir    = "./Pancreas-CT/"
     labels_dir  = "./TCIA_pancreas_labels-02-05-2017/"
 
@@ -132,7 +147,7 @@ if __name__ == "__main__":
     if not os.path.exists(output_dir):
       os.makedirs(output_dir)
 
-    generator = ImageMaskDatasetGenerator(dcms_dir=dcms_dir, labels_dir=labels_dir)
+    generator = ImageMaskDatasetGenerator(dcms_dir=dcms_dir, labels_dir=labels_dir, mirrored=True)
     generator.generate(output_dir)
     
   except:

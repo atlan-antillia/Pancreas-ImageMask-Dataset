@@ -1,5 +1,6 @@
-<h2>Pancreas-ImageMask-Dataset (2024/02/07)</h2>
+<h2>Pancreas-ImageMask-Dataset (Updated: 2024/02/09)</h2>
 This is a Pancreas ImageMask dataset for Image Segmentation.<br>  
+<li>2024/02/09: Modified <a href="./generator/ImageMaskDatasetGenerator.py">ImageMaskDatasetGenerator.py</a> to create the mirrored images and masks.</li><br>
 
 <h3>1. Dataset Citation</h3>
 
@@ -182,9 +183,14 @@ blended
 </table>
 <br>
 <h3>
-4. Download Pancreas-ImageMask-Dataset.zip
+4. Download Pancreas-ImageMask-Dataset
 </h3>
 
-You can download this dataset from the following google drive 
+You can download the augmented V2 dataset including mirrored images and masks:<br>
+
+<a href="https://drive.google.com/file/d/14DFkGFjm02vORDjvC1q8v0p--E3Ngg9L/view?usp=sharing">
+Pancreas-ImageMask-Dataset_V2.0.zip</a><br>
+, and also the previous V1 dataset:<br>
 <a href="https://drive.google.com/file/d/1Q7cDMSQgtXgZJjg-xIiFHmXOyNn3vio1/view?usp=sharing">Pancreas-ImageMask-Dataset_V1.zip</a>
+
 <br>
