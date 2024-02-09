@@ -1,13 +1,17 @@
 <h2>Pancreas-ImageMask-Dataset (Updated: 2024/02/10)</h2>
 This is a Pancreas ImageMask dataset for Image Segmentation.<br>  
-The dataset used here has been taken from the following <b>kaggle.com</b> website:<br>
+The dataset used here has been taken from <b>kaggle.com</b> website 
 <a href="https://www.kaggle.com/datasets/salihayesilyurt/pancreas-ct">Pancreas-CT</a>
 <br><br>
 
-<li>2024/02/09: Modified <a href="./generator/ImageMaskDatasetGenerator.py">ImageMaskDatasetGenerator.py</a> to create the mirrored images and masks.</li><br>
+<li>2024/02/09: Modified <a href="./generator/ImageMaskDatasetGenerator.py">ImageMaskDatasetGenerator.py</a> to create the mirrored images and masks.</li>
 <li>2024/02/10: Added <a href="./YOLOAnnotationGenerator.py">YOLOAnnotationGenerator.py</a> 
-to create YOLOAnnotation.</li><br>
-
+to create YOLOAnnotation.</li>
+<li>2024/02/10: Added EfficientDet-Dataset for Object Detection <a href="https://drive.google.com/file/d/1Yn7z_u-Ue2tI1hGRoWjKCFX4yeVeosKa/view?usp=sharing">
+Pancreas-EfficientDet-Dataset_V2.0.zip</a></li>
+<br>
+Please see also: <a href="https://github.com/atlan-antillia/Tensorflow-Image-Segmentation-Pancreas">Tensorflow-Image-Segmentation-Pancreas</a>
+<br>
 
 <h3>1. Dataset Citation</h3>
 
