@@ -1,4 +1,4 @@
-# Copyright 2022 antillia.com Toshiyuki Arai
+# Copyright 2024 antillia.com Toshiyuki Arai
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -58,7 +58,7 @@ class ImageMaskDatasetGenerator:
       print("=== mask_nii_file ")
       num_mask_files = self.generate_mask_files(mask_nii_file, subdir, masks_dir)
 
-      #               subdir        /*                                     /*            /*dcm   
+      # ./Pancreas-CT/subdir       /*                                     /*             S/*dcm   
       # ./Pancreas-CT/PANCREAS_0001/11-24-2015-PANCREAS0001-Pancreas-18957/Pancreas-99667/*.dcm"      
       dcm_files = glob.glob(self.dcms_dir + subdir + "/*/*/*.dcm") 
       num_dcm_file = len(dcm_files)

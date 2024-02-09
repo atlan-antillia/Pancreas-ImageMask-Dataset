@@ -158,7 +158,10 @@ cython_debug/
 #  and can be added to the global gitignore or merged into this file.  For a more nuclear
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
-# 2024/02/09
+# 2024/02/10
+YOLO/
+Pancreas-EfficientDet-Dataset/
+Pancreas-EfficientDet-Dataset_V2.0.zip
 Blended_train_dataset/
 Pancreas-ImageMask-Dataset/
 Pancreas-ImageMask-Dataset.zip
