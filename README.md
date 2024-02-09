@@ -37,7 +37,7 @@ Reference: https://wiki.cancerimagingarchive.net/display/Public/Pancreas-CT<br>
 Created by Sean Berryman, last modified by Tracy Nolan on Sep 16, 2020<br>
 <br>
 
-The dataset <b>Pancreas-CT</b> and has the following folder structure.<br>
+The dataset <b>Pancreas-CT</b> has the following folder structure.<br>
 <pre>
 ./Pancreas-CT
 │  ├─PANCREAS_0001
@@ -216,7 +216,22 @@ YOLO train annotation sample:<br>
 <h3>
 5.2 Create TFRecord for EfficientDet Object Detection
 </h3>
-By using <a href="https://github.com/sarah-antillia/AnnotationConverters">AnnotationConverters</a>, we have created Pancreas-EfficientDet-Datase.<br>
+By applying <a href="https://github.com/sarah-antillia/AnnotationConverters/YOLO2TFRecordConverter.py">
+YOLO2TFRecordConverter.py</a> to train and valid dataset in YOLO, we have created two TFRecords. 
+<pre>
+./TFRecord
+├─train
+└─valid
+</pre>
+, and  using <a href="https://github.com/sarah-antillia/AnnotationConverters/YOLO2COCOConverter.py">
+  YOLO2COCOConverter.py</a>,
+created COCO annotation for test dataset in YOLO.<br>
+<pre>
+./COCO
+└─test
+</pre>
+<br>
+We have finally created the following Pancreas-EfficientDet-Dataset. <br>
 <pre>
 ./Pancreas-EfficientDet-Dataset
 ├─test
