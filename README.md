@@ -1,5 +1,9 @@
 <h2>Pancreas-ImageMask-Dataset (Updated: 2024/02/10)</h2>
 This is a Pancreas ImageMask dataset for Image Segmentation.<br>  
+The dataset used here has been taken from the following <b>kaggle.com</b> website:<br>
+<a href="https://www.kaggle.com/datasets/salihayesilyurt/pancreas-ct">Pancreas-CT</a>
+<br><br>
+
 <li>2024/02/09: Modified <a href="./generator/ImageMaskDatasetGenerator.py">ImageMaskDatasetGenerator.py</a> to create the mirrored images and masks.</li><br>
 <li>2024/02/10: Added <a href="./YOLOAnnotationGenerator.py">YOLOAnnotationGenerator.py</a> 
 to create YOLOAnnotation.</li><br>
@@ -67,7 +71,7 @@ Each <b>sub-sub-folder of PANCREAS_*</b> folder contains <b>.dcm</b> files.
 │           ...
 │           └─1-240.dcm
 </pre>
-<b>TCIA_pancreas_labels-02-05-2017</b> folder contains <b>.nii</b> files, which contain masks corresponding to pixel-imagegs in the .dcm files.
+<b>TCIA_pancreas_labels-02-05-2017</b> folder contains <b>.nii</b> files, which contain masks corresponding to pixel-images in the .dcm files.
 <pre>
 ./TCIA_pancreas_labels-02-05-2017
  ├─label0001.nii
