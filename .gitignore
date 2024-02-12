@@ -160,14 +160,16 @@ cython_debug/
 #.idea/
 # 2024/02/10
 YOLO/
-Pancreas-EfficientDet-Dataset/
-Pancreas-EfficientDet-Dataset_V2.0.zip
+Cropped-Pancreas-EfficientDet-Dataset/
+Cropped-Pancreas-EfficientDet-Dataset.zip
 Blended_train_dataset/
 Pancreas-ImageMask-Dataset/
-Pancreas-ImageMask-Dataset.zip
-Pancreas-ImageMask-Dataset_V1.0.zip
-Pancreas-ImageMask-Dataset_V2.0.zip
+Cropped-Pancreas-ImageMask-Dataset/
+Cropped-Pancreas-ImageMask-Dataset.zip
+
 generator/Pancreas-CT/
 generator/Pancreas-master/
+generator/Cropped-Pancreas-master/
+
 generator/TCIA_pancreas_labels-02-05-2017/
 

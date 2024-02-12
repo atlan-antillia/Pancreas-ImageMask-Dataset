@@ -16,7 +16,7 @@
 #
 # statistics.py
 
-# 2024/02/02 : Toshiyuki Arai antillia.com
+# 2024/02/12 : Toshiyuki Arai antillia.com
 
 import glob
 import os
@@ -72,7 +72,7 @@ def plot_statistics(x, y, labels, title):
 
 if __name__ == "__main__":
   try:
-    root_dir = "./Pancreas-ImageMask-Dataset/"
+    root_dir = "./Cropped-ImageMask-Dataset/"
     count_image_files(root_dir, root_dir)
 
   except:

@@ -18,7 +18,7 @@
 
 """
 Input
-./Ovarin-Tumor-master
+./Something-master
  ├─images
  └─masks
 
@@ -27,7 +27,7 @@ Input
 
 """
 Output
-../Ovarian-Tumor-1Class-ImageMask-Dataset/
+../Something-ImageMask-Dataset/
 ├─test
 │  ├─images
 │  └─masks
@@ -93,9 +93,18 @@ def copy(image_files, masks_dir, dataset_dir):
 
 if __name__ == "__main__":
   try:
-    images_dir = "./Pancreas-master/images/"
-    masks_dir  = "./Pancreas-master/masks/"
-    output_dir = "../Pancreas-ImageMask-Dataset/"
+    input_dir  = "./Cropped-Pancreas-master/"
+    output_dir = "../Cropped-Pancreas-ImageMask-Dataset"
+    if len(sys.argv) == 3:
+
+      input_dir  = sys.argv[1]
+      output_dir = sys.argv[2]
+
+    if not os.path.exists(input_dir):
+      raise Exception("Not found input_dir " + input_dir)
+    images_dir = os.path.join(input_dir, "images")
+    masks_dir  = os.path.join(input_dir, "masks")
+
     if os.path.exists(output_dir):
       shutil.rmtree(output_dir)
     if not os.path.exists(output_dir):

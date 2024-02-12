@@ -15,7 +15,7 @@
 
 #
 # YOLOAnnotationGenerator.py for Pancreas dataset
-# Create YOLO annotation from the jpg Pancreas-ImageMask-Dataset
+# Create YOLO annotation from the jpg Cropped-Pancreas-ImageMask-Dataset
 #  test
 #   +--images
 #   +--masks
@@ -199,7 +199,7 @@ Example for Skin-Lesion
 
 INPUT:
 
-./Pancreas-ImageMask-Dataset
+./Cropped-Pancreas-ImageMask-Dataset
 ├─test
 ├─train
 └─valid
@@ -214,7 +214,7 @@ Output:
 """
 
 if __name__ == "__main__":
-  input_dir   = "./Pancreas-ImageMask-Dataset"
+  input_dir   = "./Cropped-Pancreas-ImageMask-Dataset"
   try:   
     if len(sys.argv) == 1:
       raise Exception("Please specify input_dir on command line.")
